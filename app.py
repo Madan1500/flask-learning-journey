@@ -11,5 +11,10 @@ def hello_world():  # put application's code here
 def hello():
     return "Hello World!"
 
+
+@app.route('/greet/<name>', methods=["GET"])
+def greet(name):
+    return f"Hello, {name}!"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
