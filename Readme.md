@@ -10,7 +10,7 @@ This is a Flask learning project following along with YouTube tutorials and docu
 
 ### 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/Madan1500/flask-learning-journey.git
 cd flask-learning-journey
 ```
 
