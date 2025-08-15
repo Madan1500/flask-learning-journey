@@ -35,6 +35,60 @@ python app.py
 
 The application will start on `http://localhost:5000`
 
+## 🌿 Git Workflow & Branching Strategy
+
+This repository follows a **three-branch workflow** for professional development practices:
+
+```
+main (initial work) → dev (development) → prod (production)
+```
+
+### Branch Purposes
+
+- **`main`** - Initial development and learning commits
+- **`dev`** - Active development, new features, experiments  
+- **`prod`** - Stable, production-ready code for deployment
+
+### Workflow Process
+
+1. **Learning & Initial Development**: Work directly on `main`
+2. **Feature Development**: 
+   ```bash
+   git checkout main
+   git pull origin main
+   # Make your changes
+   git add .
+   git commit -m "feat: add new learning concept"
+   git push origin main
+   ```
+3. **Merge to Development**:
+   ```bash
+   git checkout dev
+   git merge main
+   git push origin dev
+   ```
+4. **Deploy to Production**:
+   ```bash
+   git checkout prod  
+   git merge dev
+   git push origin prod
+   ```
+
+### Quick Commands
+
+```bash
+# Check current branch
+git branch
+
+# Switch branches
+git checkout main
+git checkout dev
+git checkout prod
+
+# View all branches
+git branch -a
+```
+
 ## 🌐 Live Deployment
 
 **Repository**: https://github.com/Madan1500/flask-learning-journey
@@ -44,8 +98,11 @@ The application will start on `http://localhost:5000`
 1. Go to [Render.com](https://render.com) and sign up/login
 2. Click "New" → "Web Service"
 3. Connect your GitHub account and select this repository (`flask-learning-journey`)
-4. Render will automatically detect the `render.yaml` configuration
-5. Click "Deploy" - your app will be live in a few minutes!
+4. **Important**: Change the branch from `main` to `prod` in deployment settings
+5. Render will automatically detect the `render.yaml` configuration
+6. Click "Deploy" - your app will be live in a few minutes!
+
+**Note**: Always deploy from the `prod` branch for stable releases.
 
 ### Alternative: Deploy to Railway
 
