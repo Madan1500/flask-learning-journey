@@ -38,6 +38,8 @@ The application will start on `http://localhost:5000`
 ## Current Features
 
 - **Hello World Route** (`/`) - Basic Flask route returning HTML
+- **Simple Hello Route** (`/hello`) - Alternative hello endpoint returning plain text
+- **Dynamic Greet Route** (`/greet/<name>`) - Personalized greeting using URL parameters
 
 ## Learning Progress
 
@@ -46,9 +48,10 @@ The application will start on `http://localhost:5000`
 - [x] Creating virtual environment
 - [x] Basic Flask app with Hello World route
 - [x] Understanding Flask routing basics
+- [x] Dynamic routes with URL parameters
+- [x] Multiple route endpoints
 
 ### 🔄 In Progress
-- [ ] Dynamic routes with URL parameters
 - [ ] HTTP methods (GET, POST, etc.)
 - [ ] Templates with Jinja2
 - [ ] Forms handling
@@ -65,6 +68,36 @@ pip freeze > requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
+
+## Learning Reflections 📝
+
+### Dynamic URL Parameters
+**What I learned:**
+- How to capture URL segments using `<variable_name>` syntax
+- The captured value is automatically passed as a parameter to the route function
+- URL parameters are always strings by default
+- Flask supports type converters like `<int:id>` or `<float:price>`
+
+**Example Usage:**
+```python
+@app.route('/greet/<name>')
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+**Testing:**
+- Visit `http://localhost:5000/greet/Madan` → Returns "Hello, Madan!"
+- Visit `http://localhost:5000/greet/Flask` → Returns "Hello, Flask!"
+
+**Challenges faced:**
+- Initially confused about the syntax `<name>` vs `{name}`
+- Learned that the parameter name in the URL must match the function parameter
+- Understanding that URL parameters create dynamic routes
+
+**Key takeaways:**
+- Dynamic routes make web applications more flexible and user-friendly
+- URL parameters are a fundamental concept for building REST APIs
+- This opens the door to more complex routing patterns
 
 ## Learning Resources
 
