@@ -7,5 +7,9 @@ app = Flask(__name__)
 def hello_world():  # put application's code here
     return '<h1>Hello World!</h1>'
 
+@app.route('/hello', methods=['GET'])
+def hello():
+    return "Hello World!"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
