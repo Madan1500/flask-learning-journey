@@ -91,7 +91,15 @@ git branch -a
 
 ## 🌐 Live Deployment
 
-**Repository**: https://github.com/Madan1500/flask-learning-journey
+**🚀 LIVE SITE**: https://flask-learning-journey.onrender.com  
+**📁 Repository**: https://github.com/Madan1500/flask-learning-journey
+
+### Live Routes (Test Them!):
+- **Home**: https://flask-learning-journey.onrender.com/
+- **Hello**: https://flask-learning-journey.onrender.com/hello  
+- **Greet**: https://flask-learning-journey.onrender.com/greet/YourName
+
+**Deployment Status**: ✅ Successfully deployed from `prod` branch
 
 ### Deploy to Render (Recommended)
 
@@ -134,6 +142,9 @@ git push heroku main
 - [x] Understanding Flask routing basics
 - [x] Dynamic routes with URL parameters
 - [x] Multiple route endpoints
+- [x] Professional Git workflow (main → dev → prod)
+- [x] Production deployment with Render
+- [x] Live website hosting
 
 ### 🔄 In Progress
 - [ ] HTTP methods (GET, POST, etc.)
