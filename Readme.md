@@ -35,6 +35,33 @@ python app.py
 
 The application will start on `http://localhost:5000`
 
+## 🌐 Live Deployment
+
+**Repository**: https://github.com/Madan1500/flask-learning-journey
+
+### Deploy to Render (Recommended)
+
+1. Go to [Render.com](https://render.com) and sign up/login
+2. Click "New" → "Web Service"
+3. Connect your GitHub account and select this repository (`flask-learning-journey`)
+4. Render will automatically detect the `render.yaml` configuration
+5. Click "Deploy" - your app will be live in a few minutes!
+
+### Alternative: Deploy to Railway
+
+1. Go to [Railway.app](https://railway.app) and login with GitHub
+2. Click "New Project" → "Deploy from GitHub repo"
+3. Select `flask-learning-journey` repository
+4. Railway will auto-deploy using the existing configuration
+
+### Alternative: Deploy to Heroku
+
+```bash
+# Install Heroku CLI first
+heroku create your-flask-app-name
+git push heroku main
+```
+
 ## Current Features
 
 - **Hello World Route** (`/`) - Basic Flask route returning HTML
